@@ -1,7 +1,8 @@
 # FlaskAppDeploy
 
 # update your local packages 
-1.sudo apt-get update
+
+1. sudo apt-get update
 
 # install python3.8.0
 
