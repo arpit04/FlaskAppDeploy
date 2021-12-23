@@ -3,6 +3,13 @@
 # update your local packages 
 1.sudo apt-get update
 
+# install python3.8.0
+
+sudo apt update
+sudo apt install software-properties-common
+sudo apt install python3.8
+python3.8 --version
+
 # install dependencies
 2. sudo apt-get install python3-pip python3-dev nginx
 3. python3 -m venv env
