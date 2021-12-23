@@ -61,6 +61,7 @@ WantedBy=multi-user.target
 # Configuring Nginx
 sudo nano /etc/nginx/sites-available/app
 
+```
 server {
     listen 80;
     server_name server_domain_or_IP;
@@ -70,6 +71,7 @@ location / {
   proxy_pass http://unix:/home/ubuntu/work/deployment/src/app.sock;
     }
 }
+```
 
 # enable Nginx server block:
 1. sudo ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled
