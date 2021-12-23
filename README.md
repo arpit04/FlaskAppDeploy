@@ -24,6 +24,11 @@
     
 1. psql -U postgres -d database_name
 
+# Run migraion
+
+1. export PYTHONPATH=$PYTHONPATH:{full_path_of_project}
+2. alembic upgrade head
+
 # Install Dependencies
 
 1. sudo apt install virtualenv
