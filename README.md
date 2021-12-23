@@ -30,7 +30,25 @@
  
 1. export PYTHONPATH=$PYTHONPATH:{full_path_of_project}
 2. alembic upgrade head
+ 
+# Create the WSGI Entry Point
 
+### Folder Structure:
+```
+src
+  |____ app.py
+  |____ wsgi.py
+```
+
+1. sudo nano wsgi.py
+
+```
+from app import app
+
+if __name__ == "__main__":
+    app.run()
+ ```
+ 
 # Install Dependencies
 
 1. sudo apt install virtualenv
