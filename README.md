@@ -12,6 +12,15 @@
 4. python3.8 --version
 5. sudo apt-get install nginx
 
+# install Postgres
+
+1. sudo apt install postgresql postgresql-contrib
+2. sudo -i -u postgres
+3. psql -U postgres
+4. ALTER USER postgres PASSWORD '<new-password>';
+5. CREATE DATABASE database_name
+6. To access database after step-2 : psql -U postgres -d database_name
+
 # install dependencies
 
 1. sudo apt install virtualenv
