@@ -26,6 +26,8 @@
 
 # Run migraion
 
+### Note : make .env file as referenced from dev.env
+ 
 1. export PYTHONPATH=$PYTHONPATH:{full_path_of_project}
 2. alembic upgrade head
 
