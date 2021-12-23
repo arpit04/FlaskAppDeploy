@@ -5,11 +5,11 @@
 
 # install python3.8.0
 
-sudo apt update
-sudo apt install software-properties-common
-sudo apt install python3.8
-python3.8 --version
-sudo apt-get install nginx
+1. sudo apt update
+2. sudo apt install software-properties-common
+3. sudo apt install python3.8
+4. python3.8 --version
+5. sudo apt-get install nginx
 
 # install dependencies
 
@@ -21,7 +21,7 @@ sudo apt-get install nginx
 6. deactivate
 
 #  Create a systemd Unit File
-sudo nano /etc/systemd/system/app.service
+1. sudo nano /etc/systemd/system/app.service
 
 [Unit]
 
@@ -43,8 +43,8 @@ ExecStart=/home/ubuntu/work/deployment/src/myprojectvenv/bin/gunicorn --workers 
 WantedBy=multi-user.target
 
 # We can now start the Gunicorn service we created and enable it so that it starts at boot:
-sudo systemctl start app
-sudo systemctl enable app
+1. sudo systemctl start app
+2. sudo systemctl enable app
 
 # Configuring Nginx
 sudo nano /etc/nginx/sites-available/app
@@ -60,9 +60,9 @@ location / {
 }
 
 # enable Nginx server block:
-sudo ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled
-sudo systemctl restart nginx
-sudo ufw allow 'Nginx Full'
+1. sudo ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled
+2. sudo systemctl restart nginx
+3. sudo ufw allow 'Nginx Full'
 
 # Ec2 Security Groups (Inbound Rules)
 Set Type HTTP, Protocol TCP, Port range 80, and Source to “0.0.0.0/0”.
