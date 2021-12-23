@@ -33,6 +33,7 @@
 #  Create a systemd Unit File
 1. sudo nano /etc/systemd/system/app.service
 
+```
 [Unit]
 
 Description=Gunicorn instance to serve myproject
@@ -51,6 +52,7 @@ ExecStart=/home/ubuntu/work/deployment/src/myprojectvenv/bin/gunicorn --workers 
 
 [Install]
 WantedBy=multi-user.target
+```
 
 # We can now start the Gunicorn service we created and enable it so that it starts at boot:
 1. sudo systemctl start app
