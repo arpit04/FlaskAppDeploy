@@ -19,7 +19,10 @@
 3. psql -U postgres
 4. ALTER USER postgres PASSWORD '<new-password>';
 5. CREATE DATABASE database_name
-6. To access database after step-2 : psql -U postgres -d database_name
+ 
+### To access database after step-2 :
+    
+1. psql -U postgres -d database_name
 
 # Install Dependencies
 
