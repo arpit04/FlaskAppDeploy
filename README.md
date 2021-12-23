@@ -9,15 +9,16 @@ sudo apt update
 sudo apt install software-properties-common
 sudo apt install python3.8
 python3.8 --version
+sudo apt-get install nginx
 
 # install dependencies
-2. sudo apt-get install python3-pip python3-dev nginx
-3. python3 -m venv env
-4. sudo pip3 install virtualenv
-5. source env/bin/activate
-6. pip3 install gunicorn
-7. gunicorn --bind 0.0.0.0:5000 wsgi:app
-8. deactivate
+
+1. sudo apt install virtualenv
+2. virtualenv -p python3.8 env
+3. source env/bin/activate
+4. pip3 install gunicorn
+5. gunicorn --bind 0.0.0.0:5000 wsgi:app
+6. deactivate
 
 #  Create a systemd Unit File
 sudo nano /etc/systemd/system/app.service
