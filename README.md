@@ -1,10 +1,10 @@
-# FlaskAppDeploy
+# FlaskAppDeploy step by step
 
-# update your local packages 
+# Update your local packages 
 
 1. sudo apt-get update
 
-# install python3.8.0
+# Install Python3.8.0
 
 1. sudo apt update
 2. sudo apt install software-properties-common
@@ -12,7 +12,7 @@
 4. python3.8 --version
 5. sudo apt-get install nginx
 
-# install Postgres
+# Install Postgres
 
 1. sudo apt install postgresql postgresql-contrib
 2. sudo -i -u postgres
@@ -21,7 +21,7 @@
 5. CREATE DATABASE database_name
 6. To access database after step-2 : psql -U postgres -d database_name
 
-# install dependencies
+# Install Dependencies
 
 1. sudo apt install virtualenv
 2. virtualenv -p python3.8 env
@@ -73,12 +73,13 @@ location / {
 }
 ```
 
-# enable Nginx server block:
+# Enable Nginx server block:
 1. sudo ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled
 2. sudo systemctl restart nginx
 3. sudo ufw allow 'Nginx Full'
 
 # Ec2 Security Groups (Inbound Rules)
+    
 Set Type HTTP, Protocol TCP, Port range 80, and Source to “0.0.0.0/0”.
 
 Set Type HTTP, Protocol TCP, Port range 80, and Source to “::/0”.
